@@ -1,0 +1,42 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: 'Arial';
+}
+
+body {
+  margin: 0;
+
+  display: grid;
+  grid-template-rows: auto 50px;
+  grid-template-columns: 12% auto;
+  grid-template-areas:
+      "sidebar content"
+      "footer footer";
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: gray;
+}
+
+/* This stuff below didn't change at all */
+
+.content {
+  grid-area: content; /* This is not necessary for this to work
+                         but I'm naming it for future use */
+  justify-self: center;
+  align-self: center;
+}
+footer {
+  display: grid;
+  grid-area: footer; /* This is not necessary for this to work
+                         but I'm naming it for future use */
+  background-color: lightgray;
+  padding:10px;
+}
+
+footer p {
+  margin: 0;
+  align-self: center;
+}

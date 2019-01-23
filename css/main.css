@@ -1,0 +1,44 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: 'Arial';
+}
+
+body {
+  margin: 0;
+
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, auto);
+  grid-template-areas:
+      "item1 item2 item3";
+
+  /* justify-items: center;
+  align-items: center; */
+}
+
+.container {
+  grid-column-start: 1;
+
+  background: rgb(230, 230, 230);
+  border-radius: 10px;
+  padding: 1em;
+}
+
+#item1 {
+  grid-area: item1;
+  justify-self: end;     /* Aligns to the right */
+  align-self: start;     /* Aligns to the top   */
+}
+
+#item2 {
+  grid-area: item2;
+  justify-self: start;  /* Aligns to the left    */
+  align-self: end;      /* Aligns to the bottom  */
+}
+
+#item3 {
+  grid-area: item3;
+  justify-self: center;  /* We know this already */
+  align-self: center;    /* We know this already */
+}
